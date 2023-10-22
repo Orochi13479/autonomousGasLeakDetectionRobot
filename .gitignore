@@ -1,7 +1,6 @@
+# Remove Doxygen from git repo
 html/
 latex/
 images/
-cartographer-master/
-
 Doxyfile
 *.dox
