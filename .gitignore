@@ -1,6 +1,7 @@
 html/
 latex/
 images/
+cartographer-master/
 
 Doxyfile
 *.dox
