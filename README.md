@@ -17,6 +17,7 @@ run catkin_make
 
 roslaunch turtlebot3_gazebo turtlebot3_office.launch
 
-rosrun autonomous_navigation autonomous_navigation 
-
 roslaunch ros_autonomous_slam turtlebot3_navigation.launch 
+(Disclaimer: run twice if doesn't work first time, relaunch again)
+
+rosrun autonomous_navigation autonomous_navigation 
