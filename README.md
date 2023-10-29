@@ -1,6 +1,6 @@
 # Autonomous Gas Leak Detection Robot
 
-First ensure required packages are installed or the next step <b>WILL FAIL</b> . These packages are written by other people and our project only utilises them and does not claim anypart of them as our own. 
+First ensure required packages are installed or the next step <b>WILL FAIL.</b> These packages are written by other people and our project only utilises them and does not claim any part of them as our own. 
 
 <em><b>Required Packages</b></em>:
 - [turtlebot3](https://emanual.robotis.com/docs/en/platform/turtlebot3/features/)
