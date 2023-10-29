@@ -5,7 +5,7 @@ Project using Turtlebot3 Waffle designed to search an environment, to locate the
 First ensure required packages are installed or the next step <b>WILL FAIL</b> . These packages are written by other people and our project only utilises them and does not claim anypart of them as our own. 
 
 <em><b>Required Packages</b></em>:
-- turtlebot3
+- [turtlebot3](https://emanual.robotis.com/docs/en/platform/turtlebot3/features/)
 - [ros_autonomous_slam](https://github.com/fazildgr8/ros_autonomous_slam)
 
 
@@ -24,7 +24,7 @@ roslaunch ros_autonomous_slam turtlebot3_navigation.launch
 
 <em><b>Custom Packages, Run in order</b></em>:
 
-Spawn in Cricket balls to simulate gas positions, these can be found in the default gazebo model directory or it can also be located from this Git repository (https://github.com/osrf/gazebo_models)
+Spawn in Cricket balls to simulate gas positions, these can be found in the default gazebo model directory or it can also be located from this [Git repository](https://github.com/osrf/gazebo_models)
 
 ```
 rosrun PseudoGasSensor PseudoGasSensor 
