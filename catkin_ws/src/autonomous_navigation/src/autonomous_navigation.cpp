@@ -2,10 +2,16 @@
 #include <move_base_msgs/MoveBaseAction.h>
 #include <actionlib/client/simple_action_client.h>
 #include <geometry_msgs/PoseStamped.h>
-#include <iostream>
+#include <std_msgs/Float64.h>
 #include <vector>
 
 typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseClient;
+
+void gasConcentrationCallback(const std_msgs::Float64::ConstPtr& gas_concentration) {
+    if (gas_concentration->data > 5.0) {
+        ROS_WARN("High Pseudo Gas Concentration Detected: %f", gas_concentration->data);
+    }
+}
 
 int main(int argc, char **argv)
 {
@@ -14,7 +20,7 @@ int main(int argc, char **argv)
     // Create a NodeHandle
     ros::NodeHandle nh;
 
-    // Initialise the move_base action client
+    // Initialize the move_base action client
     MoveBaseClient ac("move_base", true);
 
     // Wait for the action server to come up
@@ -22,6 +28,9 @@ int main(int argc, char **argv)
     {
         ROS_INFO("Please Make Sure you have run all the Commands in the README");
     }
+
+    // Subscribe to the pseudo gas concentration topic
+    ros::Subscriber gas_sub = nh.subscribe("/pseudo_gas", 10, gasConcentrationCallback);
 
     // List of goal positions
     std::vector<std::pair<double, double>> goals;
@@ -54,12 +63,13 @@ int main(int argc, char **argv)
 
         if (ac.getState() != actionlib::SimpleClientGoalState::SUCCEEDED)
         {
-            ROS_INFO("A Navigation Issue Has Occured");
+            ROS_INFO("A Navigation Issue Has Occurred");
         }
         
     }
     ROS_INFO("Search for Gas Leaks is Complete.");
-    ROS_INFO("Gas Leaks have been found at: ");
+
+    ros::spin(); // Keep spinning to monitor gas concentration warnings
 
     return 0;
 }
