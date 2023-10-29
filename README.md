@@ -1,7 +1,5 @@
 # Autonomous Gas Leak Detection Robot
 
-Project using Turtlebot3 Waffle designed  search an environment, to locate the potositions of gas leaks. The turtlebot3 uses an occupacy grid map previously generated as well as AMCL for localisation. The gas leaks are emulated via the positioning of an arbitrary model within the environment, using illumience to get a "gas concetration".
-
 First ensure required packages are installed or the next step <b>WILL FAIL</b> . These packages are written by other people and our project only utilises them and does not claim anypart of them as our own. 
 
 <em><b>Required Packages</b></em>:
@@ -9,7 +7,7 @@ First ensure required packages are installed or the next step <b>WILL FAIL</b> .
 - [ros_autonomous_slam](https://github.com/fazildgr8/ros_autonomous_slam)
 
 
-To install custom packages written by @Orochi13479, Copy catkin_ws Directory on top of your current catkin_ws and replace files if prompted this should place the required files in the correct Directories. If this fails maunal drop and place the files into their corresponding directories.
+To install custom packages written by @Orochi13479, copy catkin_ws Directory on top of your current catkin_ws and replace files if prompted this should place the required files in the correct Directories. If this fails manually drop and place the files into their corresponding directories.
 
 ```
 catkin_make
