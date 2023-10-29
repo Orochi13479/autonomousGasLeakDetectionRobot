@@ -25,7 +25,7 @@ roslaunch ros_autonomous_slam turtlebot3_navigation.launch
 
 <em><b>Custom Packages, Run in order</b></em>:
 
-Spawn in Cricket balls to simulate gas positions, these can be found in the default gazebo model directory
+Spawn in Cricket balls to simulate gas positions, these can be found in the default gazebo model directory or it can also be located from this Git repository (https://github.com/osrf/gazebo_models)
 
 ```
 rosrun PseudoGasSensor PseudoGasSensor 
