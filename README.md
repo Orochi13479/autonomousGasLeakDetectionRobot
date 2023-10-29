@@ -6,7 +6,7 @@ First ensure required packages are installed or the next step <b>WILL FAIL</b> .
 
 <em><b>Required Packages</b></em>:
 turtlebot3
-ros_autonomous_slam
+[ros_autonomous_slam](https://github.com/fazildgr8/ros_autonomous_slam)
 ....
 
 
