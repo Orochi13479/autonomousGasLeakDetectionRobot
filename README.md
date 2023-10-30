@@ -1,13 +1,12 @@
 # Autonomous Gas Leak Detection Robot
 
-Project using Turtlebot3 Waffle designed to search an environment, using SLAM, to locate the positions of gas leaks. The gas leaks are emulated via the positioning of an arbitrary model within the environment, using illumience to get a "gas concetration".
+Project using Turtlebot3 Waffle designed to search an environment, to locate the positions of gas leaks. The turtlebot3 uses an occupacy grid map previously generated as well as AMCL for localisation. Path planning uses Dijkstra's algorithm for global map and DWA for local map. The gas leaks are emulated via the positioning of an arbitrary model within the environment, using illumience to get a "gas concetration".
 
-First ensure required packages are installed or the next step <b>WILL FAIL</b> . These packages are written by other people and our project only utilises them and does not claim anypart of them as our own. 
+First ensure required packages are installed or the next step <b>WILL FAIL.</b> These packages are written by other people and our project only utilises them and does not claim anypart of them as our own. 
 
 <em><b>Required Packages</b></em>:
-turtlebot3
-ros_autonomous_slam
-....
+- [turtlebot3](https://emanual.robotis.com/docs/en/platform/turtlebot3/features/)
+- [ros_autonomous_slam](https://github.com/fazildgr8/ros_autonomous_slam)
 
 
 To install custom packages written by @Orochi13479 please, Copy catkin_ws Directory on top of your current catkin_ws and replace files if prompted this should place the required files in the correct Directories. If this fails maunal drop and place the files into their corresponding directories.
@@ -25,7 +24,7 @@ roslaunch ros_autonomous_slam turtlebot3_navigation.launch
 
 <em><b>Custom Packages, Run in order</b></em>:
 
-Spawn in Cricket balls to simulate gas positions, these can be found in the default gazebo model directory
+Spawn in Cricket balls to simulate gas positions, these can be found in the default gazebo model directory or it can also be located from this [Git repository](https://github.com/osrf/gazebo_models)
 
 ```
 rosrun PseudoGasSensor PseudoGasSensor 
