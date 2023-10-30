@@ -4,3 +4,4 @@ latex/
 images/
 Doxyfile
 *.dox
+*.pseudo
