@@ -9,7 +9,7 @@ First ensure required packages are installed or the next step <b>WILL FAIL.</b> 
 - [ros_autonomous_slam](https://github.com/fazildgr8/ros_autonomous_slam)
 
 
-To install custom packages written by @Orochi13479 please, Copy catkin_ws Directory on top of your current catkin_ws and replace files if prompted this should place the required files in the correct Directories. If this fails maunal drop and place the files into their corresponding directories.
+To install custom packages written by @Orochi13479, copy catkin_ws Directory on top of your current catkin_ws and replace files if prompted this should place the required files in the correct Directories. If this fails manually drop and place the files into their corresponding directories.
 
 ```
 catkin_make
